@@ -35,7 +35,7 @@ if [ -z "$STATE" ]; then
     sudo iptables -A OUTPUT -j DROP
 
     echo "Subnet: $LOCAL_SUBNET"
-    echo "Internet Banned"
+    echo "Internet Closed"
 
 # If a rule to drop incoming traffic exists, remove the rules to allow internet access
 else
