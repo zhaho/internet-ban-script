@@ -1,4 +1,4 @@
-# Internet Ban Script
+# Toggle External Traffic
 
 This repository contains a Bash script to manage internet access on a machine by modifying iptables rules. The script either blocks or allows internet access based on the current iptables state.
 
