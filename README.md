@@ -1,25 +1,17 @@
-# Toggle External Traffic
+# Internet Access Control Script using iptables
 
-This repository contains a Bash script to manage internet access on a machine by modifying iptables rules. The script either blocks or allows internet access based on the current iptables state.
-
-## Script Overview
-
-The script performs the following actions:
-1. Determines the local subnet.
-2. Checks the current state of iptables rules.
-3. If internet access is allowed, it blocks internet access while allowing local network and loopback communication.
-4. If internet access is blocked, it removes the rules blocking internet access.
+This script manages internet access on a Linux system using `iptables` firewall rules. It automatically detects the local subnet and blocks internet access if not already blocked.
 
 ## Usage
 
-### Prerequisites
+1. **Download the script**: Clone the repo or download `toggle-external-traffic.sh` to your Linux system.
 
-- `iptables` must be installed and accessible with `sudo` privileges.
-- The script should be run with `sudo` to modify iptables rules.
+2. **Make the Script Executable**: Ensure the script has executable permissions using the following command:
+   ```bash
+   chmod +x toggle-external-traffic.sh
+   ```
+ 3. **Run the script**:
+     ```bash
+     sudo ./toggle-external-traffic.sh
+     ```
 
-### Running the Script
-
-To run the script, execute the following command in your terminal:
-
-```bash
-sudo ./internet_ban.sh
